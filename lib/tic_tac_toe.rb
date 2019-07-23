@@ -72,21 +72,4 @@ WIN_COMBINATIONS = [
     turn_count(board) % 2 == 0 ? "X" : "O"
     end
 
-    def won?(board)
-    WIN_COMBINATIONS.each do |win|
-    if win.all?{|y| board[y] == "X"}
-    return win
-    elsif win.all?{|y| board[y] == "O"}
-    return win
-    end
-    end
-    return false
-    end
-
-    def full?(board)
-    board.all? do |position|
-    position == "X" || position == "O"
-    end
-    end
-
 end
