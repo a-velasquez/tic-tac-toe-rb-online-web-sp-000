@@ -89,28 +89,4 @@ WIN_COMBINATIONS = [
     end
     end
 
-    def draw?(board)
-    !(won?(board)) && full?(board)
-    end
-
-    def over?(board)
-    if won?(board) || full?(board) || draw?(board)
-    return true
-    else
-    return false
-    end
-    end
-
-    def winner(board)
-    if won?(board)
-    return board[won?(board)[0]]
-    end
-    end
-
-    def play(board)
-    until over?(board) == true
-    turn(board)
-    end
-
-    
-    
+end
